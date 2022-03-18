@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Encriptacion</title>
+</head>
+<body>
+    <input type="text" size="25">
+    <button type="submit" onclick="encriptar(this)">encriptar</button>
+    <button type="submit" onclick="desencriptar(this)">desencriptar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+		function encriptar(elemento){
+			var texto = document.getElementsByTagName("input")[0].value;
+			texto_codificado = btoa(texto)
+			document.getElementById("resultado").innerHTML = texto_codificado;
+		};
+
+		function desencriptar(elemento){
+			var texto = document.getElementsByTagName("input")[0].value;
+			texto_decodificado = atob(texto)
+			document.getElementById("resultado").innerHTML = texto_decodificado;
+		};
+	</script>
+</body>
+</html>
